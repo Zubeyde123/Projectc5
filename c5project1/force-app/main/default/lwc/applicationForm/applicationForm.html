@@ -1,0 +1,51 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 10-20-2023
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+
+  <template if:false={isLeadSent}>
+
+    <template if:true={isButtonClick}>
+      <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+    </template>
+
+    <lightning-card  variant="Narrow"  title={titleform} icon-name="standard:account">
+      
+      <p class="slds-p-horizontal_small">
+      
+        <lightning-input type="text" name="fname" label="First Name" value={leadData.FirstName}
+        onchange={textChangeHandler}></lightning-input>
+        <lightning-input type="text" name="lname" label="Last Name" value={leadData.LastName}
+        onchange={textChangeHandler}></lightning-input>
+        <lightning-input type="text" name="lemail" label="Email" value={leadData.Email}
+        onchange={textChangeHandler}></lightning-input>
+        <lightning-input type="text" name="lphone" label="Phone" value={leadData.Phone}
+        onchange={textChangeHandler}></lightning-input>
+        
+
+
+      </p>
+      <p slot="footer">
+
+        <lightning-button variant="brand" label="Submit" title="Submit" 
+        onclick={createLeadHandler} class="slds-m-left_x-small"></lightning-button>
+
+
+      </p>
+    </lightning-card>
+
+  </template>
+
+
+  <template if:true={isLeadSent}>
+    <lightning-card  variant="Narrow"  title="Thank You" icon-name="standard:account">
+      
+      <p class="slds-p-horizontal_small">Thank you for your application. One of our representative will contact with you. </p>
+      <p slot="footer"></p>
+    </lightning-card>
+  </template>
+</template>

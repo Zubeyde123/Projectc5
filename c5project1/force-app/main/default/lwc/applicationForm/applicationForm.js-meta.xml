@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+
+
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="titleform" type="String" default="Application Page"/>
+            <property name="utm_source" type="String" default=" "/>
+            <property name="utm_medium" type="String" default=" "/>
+            <property name="utm_campaign" type="String" default=" "/>
+            <property name="utm_id" type="String" default=" "/>
+            <property name="utm_term" type="String" default=" "/>
+            <property name="utm_content" type="String" default=" "/>
+            <property name="utm_referer" type="String" default=" "/>
+            
+            
+        </targetConfig>
+
+
+
+    </targetConfigs>
+</LightningComponentBundle>
